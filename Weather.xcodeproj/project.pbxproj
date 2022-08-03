@@ -19,6 +19,7 @@
 		FA42787E2896F5DC003D9B6D /* DailyWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42787D2896F5DC003D9B6D /* DailyWeatherData.swift */; };
 		FA4278802896F743003D9B6D /* TemperatureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42787F2896F743003D9B6D /* TemperatureData.swift */; };
 		FA4278852896FA01003D9B6D /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278842896FA01003D9B6D /* CityViewModel.swift */; };
+		FA427888289B1C9E003D9B6D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FA427887289B1C9E003D9B6D /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA427888289B1C9E003D9B6D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,9 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				FA427887289B1C9E003D9B6D /* Lottie */,
+			);
 			productName = Weather;
 			productReference = FA427854288FD098003D9B6D /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +164,9 @@
 				Base,
 			);
 			mainGroup = FA42784B288FD098003D9B6D;
+			packageReferences = (
+				FA427886289B1C9E003D9B6D /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = FA427855288FD098003D9B6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -395,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA427886289B1C9E003D9B6D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA427887289B1C9E003D9B6D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA427886289B1C9E003D9B6D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA42784C288FD098003D9B6D /* Project object */;
 }
