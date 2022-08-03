@@ -39,6 +39,7 @@
 		FA4278AF289B237E003D9B6D /* dayShowerRains.json in Resources */ = {isa = PBXBuildFile; fileRef = FA42789D289B237E003D9B6D /* dayShowerRains.json */; };
 		FA4278B0289B237E003D9B6D /* dayFewClouds.json in Resources */ = {isa = PBXBuildFile; fileRef = FA42789E289B237E003D9B6D /* dayFewClouds.json */; };
 		FA4278B1289B237E003D9B6D /* dayThunderstrom.json in Resources */ = {isa = PBXBuildFile; fileRef = FA42789F289B237E003D9B6D /* dayThunderstrom.json */; };
+		FA4278B3289B2406003D9B6D /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278B2289B2406003D9B6D /* MenuHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		FA42789D289B237E003D9B6D /* dayShowerRains.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dayShowerRains.json; sourceTree = "<group>"; };
 		FA42789E289B237E003D9B6D /* dayFewClouds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dayFewClouds.json; sourceTree = "<group>"; };
 		FA42789F289B237E003D9B6D /* dayThunderstrom.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dayThunderstrom.json; sourceTree = "<group>"; };
+		FA4278B2289B2406003D9B6D /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				FA42788A289B1DA0003D9B6D /* LottieView.swift */,
+				FA4278B2289B2406003D9B6D /* MenuHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				FA42786F28932FEC003D9B6D /* APIService.swift in Sources */,
 				FA42787A2896F2C8003D9B6D /* WeatherData.swift in Sources */,
 				FA4278802896F743003D9B6D /* TemperatureData.swift in Sources */,
+				FA4278B3289B2406003D9B6D /* MenuHeaderView.swift in Sources */,
 				FA42787E2896F5DC003D9B6D /* DailyWeatherData.swift in Sources */,
 				FA42788B289B1DA0003D9B6D /* LottieView.swift in Sources */,
 				FA427858288FD098003D9B6D /* WeatherApp.swift in Sources */,
