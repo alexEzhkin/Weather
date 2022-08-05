@@ -44,6 +44,7 @@
 		FA4278B7289D082E003D9B6D /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278B6289D082E003D9B6D /* TodayWeatherView.swift */; };
 		FA4278B9289D0D65003D9B6D /* HourlyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278B8289D0D65003D9B6D /* HourlyWeatherView.swift */; };
 		FA4278BB289D109E003D9B6D /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278BA289D109E003D9B6D /* DailyWeatherView.swift */; };
+		FA4278BD289D1366003D9B6D /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278BC289D1366003D9B6D /* CityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		FA4278B6289D082E003D9B6D /* TodayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
 		FA4278B8289D0D65003D9B6D /* HourlyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherView.swift; sourceTree = "<group>"; };
 		FA4278BA289D109E003D9B6D /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
+		FA4278BC289D1366003D9B6D /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				FA4278B6289D082E003D9B6D /* TodayWeatherView.swift */,
 				FA4278B8289D0D65003D9B6D /* HourlyWeatherView.swift */,
 				FA4278BA289D109E003D9B6D /* DailyWeatherView.swift */,
+				FA4278BC289D1366003D9B6D /* CityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				FA4278732893340B003D9B6D /* NetworkManager.swift in Sources */,
 				FA4278852896FA01003D9B6D /* CityViewModel.swift in Sources */,
 				FA4278B9289D0D65003D9B6D /* HourlyWeatherView.swift in Sources */,
+				FA4278BD289D1366003D9B6D /* CityView.swift in Sources */,
 				FA4278782896F27F003D9B6D /* WeatherDetail.swift in Sources */,
 				FA42785A288FD098003D9B6D /* ContentView.swift in Sources */,
 				FA42787C2896F51E003D9B6D /* WeatherResponse.swift in Sources */,
