@@ -43,6 +43,7 @@
 		FA4278B5289D0752003D9B6D /* CityNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278B4289D0752003D9B6D /* CityNameView.swift */; };
 		FA4278B7289D082E003D9B6D /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278B6289D082E003D9B6D /* TodayWeatherView.swift */; };
 		FA4278B9289D0D65003D9B6D /* HourlyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278B8289D0D65003D9B6D /* HourlyWeatherView.swift */; };
+		FA4278BB289D109E003D9B6D /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4278BA289D109E003D9B6D /* DailyWeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		FA4278B4289D0752003D9B6D /* CityNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameView.swift; sourceTree = "<group>"; };
 		FA4278B6289D082E003D9B6D /* TodayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
 		FA4278B8289D0D65003D9B6D /* HourlyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherView.swift; sourceTree = "<group>"; };
+		FA4278BA289D109E003D9B6D /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				FA4278B4289D0752003D9B6D /* CityNameView.swift */,
 				FA4278B6289D082E003D9B6D /* TodayWeatherView.swift */,
 				FA4278B8289D0D65003D9B6D /* HourlyWeatherView.swift */,
+				FA4278BA289D109E003D9B6D /* DailyWeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				FA42788B289B1DA0003D9B6D /* LottieView.swift in Sources */,
 				FA427858288FD098003D9B6D /* WeatherApp.swift in Sources */,
 				FA4278B5289D0752003D9B6D /* CityNameView.swift in Sources */,
+				FA4278BB289D109E003D9B6D /* DailyWeatherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
