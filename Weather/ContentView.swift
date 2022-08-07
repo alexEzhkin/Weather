@@ -17,8 +17,8 @@ struct ContentView: View {
                 ScrollView(showsIndicators: false) {
                     CityView(cityVM: cityVM)
                 }
-            }.padding(.top, 30)
-        }.background(LinearGradient(gradient: Gradient(colors: []), startPoint: .topLeading, endPoint: .bottomTrailing))
+            }.padding(.top, 50)
+        }.background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.3), Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .edgesIgnoringSafeArea(.all)
     }
 }
