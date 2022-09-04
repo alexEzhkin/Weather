@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct CityView: View {
-    @ObservedObject var cityVM: CityViewModel
+    @ObservedObject var cityViewModel: CityViewModel
     
     var body: some View {
         VStack {
-            CityNameView(city: cityVM.city, date: cityVM.date)
+            CityNameView(city: cityViewModel.city, date: cityViewModel.date)
                 .shadow(radius: 0)
-            TodayWeatherView(cityVM: cityVM)
+            TodayWeatherView(cityVM: cityViewModel)
                 .padding()
-            HourlyWeatherView(cityVM: cityVM)
-            DailyWeatherView(cityVM: cityVM)
+            HourlyWeatherView(cityVM: cityViewModel)
+            DailyWeatherView(cityVM: cityViewModel)
         }.padding(.bottom, 30)
     }
 }

@@ -31,10 +31,10 @@ struct MenuHeaderView: View {
         }
         .foregroundColor(.white)
         .padding()
-        .background(ZStack (alignment: .leading) {
+        .background(ZStack(alignment: .leading) {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.white)
-                .padding(.leading, 10)
+                .padding(.leading)
             
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.blue.opacity(0.5))

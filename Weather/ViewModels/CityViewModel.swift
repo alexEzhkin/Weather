@@ -41,14 +41,14 @@ class CityViewModel: ObservableObject {
     }
     
     var date: String {
-        return dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(weather.current.dt)))
+        return dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(weather.current.date)))
     }
     
     var weatherIcon: String {
-        if weather.current.weather.count > 0 {
-            return weather.current.weather[0].icon
+        if weather.current.weatherDetails.count > 0 {
+            return weather.current.weatherDetails[0].icon
         }
-        return "sun.max.fill"
+        return weather.current.weatherDetails.first?.icon ?? "sun.max.fill"
     }
     
     func getTemperature(temp: Double) -> String {
@@ -56,14 +56,14 @@ class CityViewModel: ObservableObject {
     }
     
     var temperature: String {
-        return getTemperature(temp: weather.current.temp)
+        return getTemperature(temp: weather.current.temperature)
     }
     
     var conditions: String {
-        if weather.current.weather.count > 0 {
-            return weather.current.weather[0].main
+        if weather.current.weatherDetails.count > 0 {
+            return weather.current.weatherDetails[0].main
         }
-        return ""
+        return weather.current.weatherDetails.first?.main ?? ""
     }
     
     var windSpeed: String {
@@ -88,16 +88,19 @@ class CityViewModel: ObservableObject {
     
     func getWeather(coordinate: CLLocationCoordinate2D?) {
         if let coordinate = coordinate {
-            let urlString = APIService.getURLFor(lat: coordinate.latitude, lon: coordinate.longitude)
+            let urlString = APIService.getURLFor(latitude: coordinate.latitude, longitude: coordinate.longitude)
             getWeatherInternal(city: city, for: urlString)
         } else {
-            let urlString = APIService.getURLFor(lat: 53.9000, lon: 27.5666)
+            let urlString = APIService.getURLFor(latitude: 53.9000, longitude: 27.5666)
             getWeatherInternal(city: city, for: urlString)
         }
     }
     
     func getWeatherInternal(city: String, for urlString: String) {
-        NetworkManager<WeatherResponse>.fetch(for: URL(string: urlString)!) { (result) in
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        NetworkManager<WeatherResponse>.fetch(for: url) { (result) in
             switch result {
             case .success(let response):
                 DispatchQueue.main.async {
@@ -159,6 +162,7 @@ class CityViewModel: ObservableObject {
             return "dayClearSky"
         }
     }
+    
     func getWeatherIconFor(icon: String) -> Image {
         switch icon {
         case "01d":

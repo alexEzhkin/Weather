@@ -8,20 +8,20 @@
 import Foundation
 
 struct DailyWeatherData: Codable, Identifiable {
-    var dt: Int
-    var temp: TemperatureData
-    var weather: [WeatherDetail]
+    var date: Int
+    var temperature: TemperatureData
+    var weatherDetails: [WeatherDetail]
     
-    enum CodingKey: String {
-        case dt
-        case temp
-        case weather
+    enum CodingKeys: String, CodingKey {
+        case date = "dt"
+        case temperature = "temp"
+        case weatherDetails = "weather"
     }
     
     init() {
-        dt = 0
-        temp = TemperatureData(min: 0.0, max: 0.0)
-        weather = [WeatherDetail(main: "", description: "", icon: "")]
+        date = 0
+        temperature = TemperatureData(min: 0.0, max: 0.0)
+        weatherDetails = [WeatherDetail(main: "", description: "", icon: "")]
     }
 }
 

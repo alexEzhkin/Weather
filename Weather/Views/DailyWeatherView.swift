@@ -20,22 +20,24 @@ struct DailyWeatherView: View {
     
     private func dailyCell(weather: DailyWeatherData) -> some View {
         HStack {
-            Text(cityVM.getDayFor(timeStamp: weather.dt).uppercased())
+            Text(cityVM.getDayFor(timeStamp: weather.date).uppercased())
                 .frame(width: 50)
             
             Spacer()
             
-            Text("\(cityVM.getTemperature(temp: weather.temp.max)) | \(cityVM.getTemperature(temp: weather.temp.min))°C")
+            Text("\(cityVM.getTemperature(temp: weather.temperature.max)) | \(cityVM.getTemperature(temp: weather.temperature.min))°C")
                 .frame(width: 150)
             
             Spacer()
             
-            cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
+            cityVM.getWeatherIconFor(icon: weather.weatherDetails.count > 0 ? weather.weatherDetails[0].icon : "sun.max.fill")
         }
         .foregroundColor(.white)
         .padding(.horizontal, 40)
         .padding(.vertical, 15)
-        .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)))
+        .background(RoundedRectangle(cornerRadius: 5)
+            .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]),
+                                 startPoint: .topLeading, endPoint: .bottomTrailing)))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
         .shadow(color: Color.white.opacity(0.2), radius: 2, x: 2, y: 2)
     }

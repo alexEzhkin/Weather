@@ -12,14 +12,14 @@ struct CityNameView: View {
     var date: String
     
     var body: some View {
-        HStack {
-            VStack(alignment: .center, spacing: 10) {
-                Text(city)
-                    .font(.title)
-                    .bold()
-                Text(date)
-            }.foregroundColor(.white)
-        }.padding()
+        VStack{
+            Text(city)
+                .font(.title)
+                .bold()
+            Text(date)
+        }
+        .foregroundColor(.white)
+        .padding()
     }
 }
 

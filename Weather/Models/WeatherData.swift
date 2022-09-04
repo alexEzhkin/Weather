@@ -8,8 +8,8 @@
 import Foundation
 
 struct WeatherData: Codable, Identifiable {
-    var dt: Int
-    var temp: Double
+    var date: Int
+    var temperature: Double
     var feels_like: Double
     var pressure: Int
     var humidity: Int
@@ -17,11 +17,11 @@ struct WeatherData: Codable, Identifiable {
     var clouds: Int
     var wind_speed: Double
     var wind_deg: Int
-    var weather: [WeatherDetail]
+    var weatherDetails: [WeatherDetail]
     
-    enum CodingKey: String {
-        case dt
-        case temp
+    enum CodingKeys: String, CodingKey {
+        case date = "dt"
+        case temperature = "temp"
         case feels_like
         case pressure
         case humidity
@@ -29,12 +29,12 @@ struct WeatherData: Codable, Identifiable {
         case clouds
         case wind_speed
         case wind_deg
-        case weather
+        case weatherDetails = "weather"
     }
     
     init() {
-        dt = 0
-        temp = 0.0
+        date = 0
+        temperature = 0.0
         feels_like = 0.0
         pressure = 0
         humidity = 0
@@ -42,7 +42,7 @@ struct WeatherData: Codable, Identifiable {
         clouds = 0
         wind_speed = 0.0
         wind_deg = 0
-        weather = []
+        weatherDetails = []
     }
 }
 
