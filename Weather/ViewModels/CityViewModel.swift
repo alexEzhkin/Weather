@@ -11,6 +11,7 @@ import CoreLocation
 
 class CityViewModel: ObservableObject {
     
+    @Published var loading = false
     @Published var weather = WeatherResponse.emptyResponse()
     @Published var city: String = "Minsk" {
         didSet {
@@ -113,9 +114,11 @@ class CityViewModel: ObservableObject {
     }
     
     func getLocation() {
+        self.loading = true
         CLGeocoder().geocodeAddressString(city) { (placemarks, error) in
             if let places = placemarks, let place = places.first {
                 self.getWeather(coordinate: place.location?.coordinate)
+                self.loading = false
             }
         }
     }
