@@ -12,11 +12,27 @@ struct MenuHeaderView: View {
     
     @ObservedObject var cityViewModel: CityViewModel
     @State private var searchTerm = "Minsk"
+    @State var showView = false
     
     var body: some View {
         HStack {
             TextField("", text: $searchTerm)
                 .padding(.leading, 20)
+            
+            Button {
+                cityViewModel.city = searchTerm
+                showView.toggle()
+            } label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.blue)
+                    Image(systemName: "mappin.and.ellipse")
+                }
+            }
+            .sheet(isPresented: $showView) {
+                MapGeolocationView()
+            }
+            .frame(width: 50, height: 50)
             
             Button {
                 cityViewModel.city = searchTerm
