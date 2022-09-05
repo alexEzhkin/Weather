@@ -12,7 +12,7 @@ struct TodayWeatherView: View {
     
     var body: some View {
         VStack{
-            Text("Today")
+            Text(NSLocalizedString("Today", comment: ""))
                 .font(.largeTitle)
                 .bold()
             
@@ -21,7 +21,7 @@ struct TodayWeatherView: View {
                     .frame(width: 100, height: 100)
                 
                 VStack(alignment: .leading) {
-                    Text("\(cityVM.temperature)°C")
+                    Text("\(cityVM.temperature)" + NSLocalizedString("Temperature unit", comment: ""))
                         .font(.system(size: 42))
                     Text(cityVM.conditions)
                 }
@@ -29,7 +29,7 @@ struct TodayWeatherView: View {
             
             HStack {
                 Spacer()
-                widgetView(image: "wind", color: .green, title: "\(cityVM.windSpeed)km/h")
+                widgetView(image: "wind", color: .green, title: "\(cityVM.windSpeed)" + NSLocalizedString("Wind speed unit", comment: ""))
                 Spacer()
                 widgetView(image: "drop.fill", color: .blue, title: "\(cityVM.humidity)")
                 Spacer()
