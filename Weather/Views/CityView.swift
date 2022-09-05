@@ -14,6 +14,11 @@ struct CityView: View {
         VStack {
             CityNameView(city: cityViewModel.city, date: cityViewModel.date)
                 .shadow(radius: 0)
+            if cityViewModel.loading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        .scaleEffect(2)
+            }
             TodayWeatherView(cityVM: cityViewModel)
                 .padding()
             HourlyWeatherView(cityVM: cityViewModel)

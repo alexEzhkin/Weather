@@ -11,6 +11,7 @@ struct ContentView: View {
     @ObservedObject var cityViewModel = CityViewModel()
     
     var body: some View {
+        let langStr = Locale.current.languageCode
         ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
                 MenuHeaderView(cityViewModel: cityViewModel)

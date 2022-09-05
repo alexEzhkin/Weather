@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Weather
+
+  Created by Alex on 6.09.22.
+  
+*/
+"Today" = "Today";
+"Temperature unit" = "°F";
+"Wind speed unit" = "mp/h";
